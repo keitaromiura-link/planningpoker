@@ -19,7 +19,7 @@ export default {
     PointSelection
   },
   computed: {
-    points: () => [0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100, 999, -1]
+    points: () => [0, 0.5, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 999, -1]
   },
   props: ['point']
 }

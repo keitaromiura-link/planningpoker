@@ -194,14 +194,17 @@ export default {
 .icon-box[point="13"] {
   font-size: 94px;
 }
-.icon-box[point="20"] {
+.icon-box[point="21"] {
   font-size: 108px;
 }
-.icon-box[point="40"] {
+.icon-box[point="34"] {
   font-size: 137px;
 }
-.icon-box[point="100"] {
+.icon-box[point="55"] {
   font-size: 185px;
+}
+.icon-box[point="89"] {
+  font-size: 234px;
 }
 .icon-box[point="999"] {
   font-size: var(--baseBoxSize);
