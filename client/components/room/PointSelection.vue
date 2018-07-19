@@ -17,7 +17,7 @@ export default {
   computed: {
     pointLabel() {
       if (this.$props.point === -1) return '?';
-      if (this.$props.point === 999) return '<div class="icon-stand"></div>';
+      if (this.$props.point === 999) return '&%9749;';
       return this.$props.point;
     }
   }
