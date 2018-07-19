@@ -17,7 +17,7 @@ export default {
   computed: {
     pointLabel() {
       if (this.$props.point === -1) return '?';
-      if (this.$props.point === 999) return '&%9749;';
+      if (this.$props.point === 999) return '☕';
       return this.$props.point;
     }
   }
