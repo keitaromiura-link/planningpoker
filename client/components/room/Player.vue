@@ -11,7 +11,7 @@
         i.material-icons(
           v-if='selectedInfinity'
         )
-          | all_inclusive
+          | ☕
       .question(
         v-if='selectedQuestion'
       )
