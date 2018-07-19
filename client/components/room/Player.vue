@@ -59,7 +59,7 @@ export default {
     pointLabel() {
       if (!this.$props.isMyself && !this.$props.isOpen) return '...'
       if (this.selectedQuestion) return '?';
-      if (this.selectedInfinity) return '∞';
+      if (this.selectedInfinity) return '!';
       if (this.$props.point === 0 || this.$props.point) return `${this.$props.point} pt`; 
       return '...';
     },
