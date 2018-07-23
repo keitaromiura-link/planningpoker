@@ -69,6 +69,8 @@ class Room extends Immutable.Record({
     const max = this.get('players').maxBy(player => player.point);
     const min = this.get('players').minBy(player => player.point);
     const difference = true;
+    console.log(max);
+    console.log(min);
     if (max === min) {
         difference = false;
     }else if (max === 89 && min === 55){
