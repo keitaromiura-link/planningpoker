@@ -60,17 +60,20 @@ class Room extends Immutable.Record({
     //const first = this.get('players').first();
     //const p = first.point;
 
-    //if (!(_.isNumber(p) && p >= 0 && p <= 100)) return '';
+    if (!(_.isNumber(p) && p >= 0 && p <= 100)) return '';
 
     // 異なるポイントの要素があったら非合意
     // @todo 異なるポイントの要素が連続する3つ以内じゃなかったら。
     
     // const difference = this.get('players').find(player => player.point !== p);
-    const max = this.get('players').maxBy(player => player.point);
-    const min = this.get('players').minBy(player => player.point);
+    console(this.get('players'));
+    const maxplayer = this.get('players').maxBy(player => player.point);
+    const minplayer = this.get('players').minBy(player => player.point);
     const difference = true;
-    console.log(max);
-    console.log(min);
+    const max = maxplayer.point;
+    const min = minplayer.point;
+    console(max);
+    console(min);
     if (max === min) {
         difference = false;
     }else if (max === 89 && min === 55){
