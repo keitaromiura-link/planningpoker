@@ -62,9 +62,59 @@ class Room extends Immutable.Record({
 
     if (!(_.isNumber(p) && p >= 0 && p <= 100)) return '';
 
-    // 異なるポイントの要素があったら非合意
-    const difference = this.get('players').find(player => player.point !== p);
-
+      // 異なるポイントの要素が連続する3つ以内じゃなかったら。
+    
+    // const difference = this.get('players').find(player => player.point !== p);
+    const maxplayer = this.get('players').maxBy(player => player.point);
+    const minplayer = this.get('players').minBy(player => player.point);
+    const max = maxplayer.point;
+    const min = minplayer.point;
+    var difference = true;
+    if (max === min) {
+        difference = false;
+    }else if (max === 89 && min === 55){
+        difference = false;
+    }else if (max === 89 && min === 34){
+        difference = false;
+    }else if (max === 55 && min === 34){
+        difference = false;
+    }else if (max === 55 && min === 21){
+        difference = false;
+    }else if (max === 34 && min === 21){
+        difference = false;
+    }else if (max === 34 && min === 13){
+        difference = false;
+    }else if (max === 21 && min === 13){
+        difference = false;
+    }else if (max === 21 && min === 8){
+        difference = false;
+    }else if (max === 13 && min === 8){
+        difference = false;
+    }else if (max === 13 && min === 5){
+        difference = false;
+    }else if (max === 8 && min === 5){
+        difference = false;
+    }else if (max === 8 && min === 3){
+        difference = false;
+    }else if (max === 5 && min === 3){
+        difference = false;
+    }else if (max === 5 && min === 2){
+        difference = false;
+    }else if (max === 3 && min === 2){
+        difference = false;
+    }else if (max === 3 && min === 1){
+        difference = false;
+    }else if (max === 2 && min === 1){
+        difference = false;
+    }else if (max === 2 && min === 0.5){
+        difference = false;
+    }else if (max === 1 && min === 0.5){
+        difference = false;
+    }else if (max === 1 && min === 0){
+        difference = false;
+    }else if (max === 0.5 && min === 0){
+        difference = false;
+    }
     return difference ? '' : 'consensus';
   }
 }
