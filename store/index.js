@@ -53,7 +53,8 @@ class Room extends Immutable.Record({
     if (!points.length) return null;
 
     const sum = points.reduce((a, b) => a + b, 0);
-    return _.round(sum / points.length, 0);
+    const average = sum / points.length;
+    return (average == 0.5)? 0.5 :_.round(average, 0);
   }
 
   result () {
